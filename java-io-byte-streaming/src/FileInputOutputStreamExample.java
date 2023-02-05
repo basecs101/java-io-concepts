@@ -7,9 +7,10 @@ public class FileInputOutputStreamExample {
 
             System.out.println(inputStream.available());
 
-            OutputStream outputStream = new FileOutputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts\\java-io-byte-streaming\\src\\ouput.txt");
+            OutputStream outputStream = new FileOutputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts\\java-io-byte-streaming\\src\\output.txt");
 
-            outputStream.write(inputStream.readAllBytes());
+            byte[] bytes = inputStream.readAllBytes();//read all bytes from input file
+            outputStream.write(bytes);//write all bytes to the output file
 
             inputStream.close();
             outputStream.close();

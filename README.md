@@ -2,24 +2,21 @@
 
 ### java.io --> Java Input and Output
 
-> read/write or input/output
-
-
+#### Read/Write or Input/Output
 > [Source] 	-->	[Apps/Program] 	--> [Destination]
-
+> 
 > [File1.txt] --> 	[Program] 		--> [File2.txt]
-
-
+> 
 > [File1.txt] --> 	[Program] 		--> [Console]
-
-
+> 
 > [Console] 	--> 	[Program] 		--> [File2.txt]
-
-
+> 
 > [Console] 	--> 	[Program] 		--> [Console]
 
+### ```Serialization``` --> Objects are written to a file
+### ```Deserialization``` --> Objects are read from a file
 
-### Input/Ouput types:-
+### Input/Output Streaming types:-
 1. #### Byte(1B or 8 bit) Streaming(Sequence of elements/Data)
 2. #### Char(2B or 16 bit) Streaming(Sequence of elements/Data) for characters.
 
@@ -45,3 +42,16 @@
 ### ```ByteArrayOutputStream```
 1. > This class implements an output stream in which the data is written into a byte array. The buffer automatically grows as data is written to it. The data can be retrieved using toByteArray() and toString(). 
 2. > Closing a ByteArrayOutputStream has no effect. The methods in this class can be called after the stream has been closed without generating an IOException.
+   > 
+### ```ObjectInputStream```
+1. >
+   > 
+### ```ObjectOutputStream```
+1. > 
+   > 
+### ```BufferedInputStream```
+1. >
+   > 
+### ``BufferedOuputStream``
+1. >
+   > 
