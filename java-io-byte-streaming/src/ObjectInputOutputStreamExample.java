@@ -41,8 +41,8 @@ public class ObjectInputOutputStreamExample {
         objectOutputStream.writeObject(msg);
         objectOutputStream.writeObject(student);
 
-        InputStream inputStream = new FileInputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts\\java-io-byte-streaming\\src\\objects.txt");
-        ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
+        InputStream fileInputStream = new FileInputStream("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts\\java-io-byte-streaming\\src\\objects.txt");
+        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
         System.out.println(objectInputStream.readObject());
         System.out.println(objectInputStream.readObject());

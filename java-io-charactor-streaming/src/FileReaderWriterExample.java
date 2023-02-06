@@ -1,22 +1,25 @@
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 public class FileReaderWriterExample {
     public static void main(String[] args) throws IOException {
-        Reader fileReader = new FileReader("C:\\Users\\vikra\\IdeaProjects\\java-io-concepts\\java-io-charactor-streaming\\src\\inputFile.txt");
+
+        Reader fileReader = new FileReader("C:\\Users\\vikra\\IdeaProjects" +
+                "\\java-io-concepts\\java-io-charactor-streaming\\src\\" +
+                "input.txt");
 
         System.out.println(fileReader.ready());
 
+        int size = 50;
+        char[] charsFromFile = new char[size];
+        fileReader.read(charsFromFile);
 
-        int size = 10;
-        char[] chars = new char[size];
-        fileReader.read(chars);
-        System.out.println(chars);
+        System.out.println(charsFromFile);//print on the console
 
-        while (fileReader.ready()){
-            System.out.println((char) fileReader.read());
-        }
+        FileWriter fileWriter = new FileWriter("C:\\Users\\vikra\\IdeaProjects" +
+                "\\java-io-concepts\\java-io-charactor-streaming\\src\\" +
+                "output.txt");
+        fileWriter.write(charsFromFile);
     }
 }
